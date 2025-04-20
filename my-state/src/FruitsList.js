@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
-import { FruitContext } from 'App'
+import { FruitsContext } from './App';
 function FruitsList(){
-    const fruit =useContext(FruitContext)
+    const fruits =useContext(FruitsContext);
    return(
     <div>
-        This fruits is called:{fruit}
+        <p>This fruits is called:{fruits.map((fruit,index)=>(
+            <li key={index}>{fruit.name}</li>
+        ))}</p>
     </div>
    )
 }
