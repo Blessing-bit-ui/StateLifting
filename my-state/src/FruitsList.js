@@ -5,7 +5,7 @@ function FruitsList(){
    return(
     <div>
         <p>This fruits is called:{fruits.map((fruit,index)=>(
-            <li key={index}>{fruit.name}</li>
+            <li key={index}>{fruit.name}: {fruit.id}</li>
         ))}</p>
     </div>
    )
