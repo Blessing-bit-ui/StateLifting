@@ -4,16 +4,17 @@ import FruitsList from './FruitsList'
 import { createContext } from 'react'
 import { useContext } from 'react'
 
+export const FruitsContext = createContext([
+  { name: "Apple", id: "1" },
+  { name: "Orange", id: "2" },
+  { name: "Lemon", id: "3" },
+]);
+
 function App(){
-  const fruits = createContext([
-    {name:"Apple", id:"1"},
-    {name:"Orange", id:"2"},
-    {name: "Lemon", id:"3"}
-  ])
-  const fruit =useContext()
+  const fruit = useContext(FruitsContext)
   return(
     <div>
-      <FruitsList name={fruits} />
+      <FruitsList name={fruit} />
     </div>
   )  
 }
